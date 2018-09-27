@@ -1,0 +1,114 @@
+Day25
+	- 博客
+		- KindEditor
+			- beautifulsoup4对标签进行过滤
+			- 单例模式
+			
+		- 事务操作
+			 - from django.db import transaction
+		
+		- 筛选条件
+			 - 利用数据库内置函数实现筛选
+			 
+			 
+		作业：
+			- 示例
+			- 评论和点赞
+		
+		pip3 install beautifulsoup4
+		
+	- CMDB
+		1. 资产自动收集
+		2. API URL
+		3. 可视化管理
+		
+		
+		1. 资产自动收集
+			- paramiko，ansible，fabric
+			  通过API获取主机名，利用paramiko链接服务获取数据，解析成字典
+			  优点：无依赖
+			  缺点：慢
+			- saltstack
+			  通过API获取主机名，利用salt api链接服务获取数据，解析成字典
+			  优点：无依赖
+			  缺点：有点慢
+			  - pillar
+			- puppet
+			  - 知识概要：
+				master
+				slave: certname
+				slave: certname
+				配置文件：30分钟 master和slave进行一次连接
+				
+			  - report报表
+				配置文件
+				  report: cmdb  # 每30分钟交互时，回执行制定目录的下cmdb.rb文件中的process函数
+		      - 自定义factor
+			  
+			- Agent
+				- 缺点：每台有agent
+				- 优点：快
+				v = subprocess.getoutput('hostname')
+			
+		     
+			===================== 执行shell命令[网卡][硬盘]...，获取结果 =======================
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	- JSONP - 棘手的问题
+		import requests
+		request.get('http://www.baidu.com')
+		request.post('http://www.baidu.com')
+		
+		由于浏览器具有同源策略（阻止Ajax请求，无法阻止<script src='...'></script>）
+		巧妙：
+			- 创建script标签
+			- src=远程地址
+			- 返回的数据必须是js格式
+		只能发GET请求
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

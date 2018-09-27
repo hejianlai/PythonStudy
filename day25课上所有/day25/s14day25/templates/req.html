@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <h1>后台获取的结果</h1>
+    {{ result }}
+    <h1>js直接获取结果</h1>
+    <input type="button" value="获取数据" onclick="getContent();" />
+    <div id="container"></div>
+    <script src="/static/jquery-1.8.2.js"></script>
+    <script>
+        function getContent(){
+            /*
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET','http://wupeiqi.com:8001/jsonp.html?k1=v1&k2=v2');
+            xhr.onreadystatechange = function(){
+                console.log(xhr.responseText);
+            };
+            xhr.send();
+            */
+            /*
+            var tag = document.createElement('script');
+            tag.src = 'http://www.jxntv.cn/data/jmd-jxtv2.html?callback=list&_=1454376870403';
+            document.head.appendChild(tag);
+            document.head.removeChild(tag);
+            */
+            $.ajax({
+                url: 'http://www.jxntv.cn/data/jmd-jxtv2.html',
+                type: 'POST',
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                jsonpCallback: 'list'
+            })
+        }
+
+        function list(arg){
+            console.log(arg);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2190763172">
+    <data-source source="LOCAL" name="db" uuid="ccf10c9a-866b-4aca-92f8-b9126540fb6b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>SQLite</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Administrator\PycharmProjects\PerfectCRM\db.sqlite3</jdbc-url>
+    </data-source>
+  </component>
+</project>

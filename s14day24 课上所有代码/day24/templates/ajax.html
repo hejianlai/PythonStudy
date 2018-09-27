@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="text"/>
+    <input type="button" value="Ajax1" onclick="Ajax1();" />
+
+
+    <!--
+    <input type="text" id="url" />
+    <input type="button" value="发送Iframe请求" onclick="iframeRequest();" />
+    <iframe id="ifm" src="http://www.baidu.com"></iframe>
+    -->
+
+    <form action="/ajax_json/" method="POST" target="ifm1">
+        <iframe id="ifm1" name="ifm1" ></iframe>
+        <input type="text" name="username" />
+        <input type="text" name="email" />
+        <input type="submit" onclick="sumitForm();" value="Form提交"/>
+    </form>
+
+
+
+    <script type="text/javascript" src="/static/jquery-1.12.4.js"></script>
+    <script>
+
+        function getXHR(){
+            var xhr = null;
+            if(XMLHttpRequest){
+                xhr = new XMLHttpRequest();
+            }else{
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return xhr;
+
+        }
+
+        function Ajax1(){
+            var xhr = getXHR();
+            //var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/ajax_json/',true);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4){
+                    // 接收完毕
+                    var obj = JSON.parse(xhr.responseText);
+                    console.log(obj);
+                }
+            };
+            xhr.setRequestHeader('k1','v1');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset-UTF-8');
+            xhr.send("name=root;pwd=123");
+        }
+
+        /*
+        function iframeRequest(){
+            var url = $('#url').val();
+            $('#ifm').attr('src',url);
+        }
+        */
+
+
+        function sumitForm(){
+            $('#ifm1').load(function(){
+                var text = $('#ifm1').contents().find('body').text();
+                var obj = JSON.parse(text);
+            })
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+CSS补充：
+    - position
+    - background
+    - hover
+    - overflow
+    - z-index
+    - opacity
+    
+    示例：输入框右边放置图标
+    
+JavaScript：
+    局部变量 var
+    基本数据类型：
+        数字
+        字符串
+        数组
+        字典
+        布尔值
+    For循环
+        
+    条件语句
+        ==
+        !=
+        ===
+        !==
+        
+        ||
+        
+        &&
+        
+    函数的定义：
+        function func(){
+            ...
+        }
+Dom
+    
+    找标签
+        - 直接找 $('#id')  $('.c1').siblings()
+        - 简介找
+    操作：
+        
+        innerText
+        
+        checkbox: 
+            checked    
+        
+        className
+        classList
+        
+    事件：
+        <div onclick='函数(123)'></div>
+        
+        <script>
+            。。。。
+        </script>
+        
+    定时器
+        setInterval('函数()', 4000)
+    
+    其他：
+        
+        alert()
+        console.log()
+    
+实例：
+    莅临指导
+    多选
+    模态对话框
+    左侧菜单
+    返回顶部
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
