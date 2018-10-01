@@ -20,3 +20,4 @@
 2016-02-17 17:56:10,630 - transaction - INFO - account:1234   action:withdraw    amount:10000.0   interest:500.0
 2016-08-20 09:51:36,616 - transaction - INFO - account:1234   action:repay    amount:300.0   interest:0.0
 2016-08-20 09:51:58,501 - transaction - INFO - account:1234   action:withdraw    amount:523.0   interest:26.150000000000002
+2018-09-30 21:09:16,609 - transaction - INFO - account:1234   action:repay    amount:45.0   interest:0.0
