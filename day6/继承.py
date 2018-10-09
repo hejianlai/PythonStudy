@@ -22,6 +22,7 @@ class Relation(object):
         print("%s is making friends with %s" % (self.name,obj.name))
         self.friends.append(obj.name)
 class Man(Relation,People):
+    #以下为父类重构
     # def __init__(self,name,age,money):
     #     #People.__init__(self,name,age)
     #     super(Man,self).__init__(name,age) #新式类写法

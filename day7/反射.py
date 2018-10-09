@@ -21,3 +21,7 @@ else:
     func = getattr(d, choice)
     func(d)
 
+#hasattr(obj,name_str) 判断一个对象里是否有对应的name_str字符串的方法
+#getattr(obj,name_str) 根据字符串去获取obj对象里的对应的方法的内存地址
+#setattr(obj，'y',z) is equivalent to 
+#delattr(obj,name_str) 删除一个属性

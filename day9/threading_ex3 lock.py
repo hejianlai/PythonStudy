@@ -20,7 +20,7 @@ for i in range(50):
     t_objs.append(t) #为了不阻塞后面线程的启动，不在这里join，先放到一个列表里
 
 for t in t_objs: #循环线程实例列表，等待所有线程执行完毕
-    t.join()
+    t.join()    #join等待子线程执行完毕
 
 print("----------all threads has finished...",threading.current_thread(),threading.active_count())
 
